@@ -1,7 +1,7 @@
 class Person {
     
-    private String name;
-    private int age;
+    protected String name;
+    protected int age;
 
     public Person(String name, int age) {
         this.name = name;
@@ -17,7 +17,7 @@ class Person {
     }
 
     public void setName(String name) {
-		this.width = width;
+		this.name = name;
 	}
 
 	public void setAge(int age) {
