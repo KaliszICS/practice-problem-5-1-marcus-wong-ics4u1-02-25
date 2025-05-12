@@ -1,39 +1,37 @@
-import java.util.ArrayList;
-
 class Parent extends Person{
     
-    private String spouseField;
-    private ArrayList<Child> children;
+    private Parent spouse;
+    private Child[] children;
 
-    public Parent(String name, int age, String spouseField, ArrayList<Child> children) {
+    public Parent(String name, int age, Parent spouse) {
         super(name, age);
-        this.spouseField = spouseField; 
-        this.children = new ArrayList<>();
+        this.spouse = spouse; 
+        this.children = new Child[0];
     }
 
     public Parent(String name, int age) {
         super(name, age);
-        this.spouseField = null;
-        this.children = new ArrayList<>();
+        this.spouse = null;
+        this.children = new Child[0];
     }
 
-    public String getSpouse() {
-        return this.spouseField;
+    public Parent getSpouse() {
+        return this.spouse;
     }       
     
-    public void setSpose(String spouseField)  {
-        this.spouseField = spouseField;
+    public void setSpouse(Parent spouse)  {
+        this.spouse = spouse;
     }
 
-    public ArrayList<Child> getChildren() {
-        return this.children;
+    public Child[] getChildren() {
+        return children;
     }
     
-    public void setChildren(ArrayList<Child> children) {
+    public void setChildren(Child[] children) {
         this.children = children;
-    }
+    }  
 
     public void addChild(Child child) {
-        this.children.add(child);
-    }   
+
+    }
 }
